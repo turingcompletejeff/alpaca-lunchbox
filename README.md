@@ -1,4 +1,4 @@
-📈 Alpaca-Shirt
+📈 Alpaca-lunchbox
 
 A trading bot and data pipeline for the S&P 500, built around RSI-based
 strategies.
@@ -25,7 +25,7 @@ trades with Alpaca (paper trading supported).
 
 🗂️ Repo Structure
 
-    alpaca-shirt/
+    alpaca-lunchbox/
     │
     ├── 0sync_portfolio.py       # syncs the alpaca portfolio with local DB
     ├── 1rsi-compare.py          # Fetch RSI snapshots + save to DB (Polygon)
@@ -48,8 +48,8 @@ trades with Alpaca (paper trading supported).
 
 1. Clone the repo
 
-    git clone https://github.com/daethstalker/alpaca-shirt.git
-    cd alpaca-shirt
+    git clone https://github.com/turingcompletejeff/alpaca-lunchbox.git
+    cd alpaca-lunchbox
 
 2. Configure .env
 
@@ -91,7 +91,7 @@ credentials:
 
 Generate RSI Snapshots (Polygon-powered ✅):
 
-    python rsi-compare.py
+    python 1rsi-compare.py
 
 Outputs: - csv/YYYY-MM-DD-sp500_rsi_snapshot.csv -
 plots/YYYY-MM-DD-sp500_rsi_hist.png - Inserts into Postgres snapshots
@@ -99,7 +99,7 @@ table
 
 Execute Trades (Alpaca):
 
-    python trade_executor_full.py
+    python 2trade_executor.py
 
 -   Shows available cash 💰
 -   Previews oversold/overbought candidates
